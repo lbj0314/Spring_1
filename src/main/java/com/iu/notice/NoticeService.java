@@ -1,19 +1,18 @@
-package com.iu.s1.notice;
+package com.iu.notice;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NoticeService {
 	
+	@Inject
 	private NoticeDAO noticeDAO;
 //	private NoticeDTO noticeDTO;
-	
-	public NoticeService() {
-		noticeDAO = new NoticeDAO();
-//		noticeDTO = new NoticeDTO();
-	}
-	
 	
 	//list
 	public List<NoticeDTO> noticeList() throws Exception {

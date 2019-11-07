@@ -18,25 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	@RequestMapping("/notice/noticeWrite")
-	public String noticeWrite() {	
-		
-		return "notice/noticeWrite";
-	}
-	
-	@RequestMapping("/notice/noticeSelect")
-	public String noticeSelect() {	
-		
-		return "notice/noticeSelect";
-	}
-	
-	@RequestMapping("/notice/noticeList")
-	public String noticeList() {	
-		
-		return "notice/noticeList";
-	}
-	
+
 	@RequestMapping("/test")
 	public String test() {	
 		

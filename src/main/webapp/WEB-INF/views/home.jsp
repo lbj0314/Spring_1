@@ -16,5 +16,7 @@
 <img alt="#" src="./resources/imgs/momo2.jpg">
 <a href="./test">Go test</a>
 <a href="./notice/noticeList">Go noticeList</a>
+<a href="./member/memberJoin">Member Join</a>
+<a href="./member/memberLogin">Member Login</a>
 </body>
 </html>

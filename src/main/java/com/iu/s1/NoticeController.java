@@ -2,6 +2,7 @@ package com.iu.s1;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -11,20 +12,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.iu.s1.notice.NoticeDTO;
-import com.iu.s1.notice.NoticeService;
+import com.iu.notice.NoticeDTO;
+import com.iu.notice.NoticeService;
 
 @Controller
 @RequestMapping("/notice/**")
 public class NoticeController {
-
+	
+	@Inject
 	private NoticeService noticeService;
 	
-	public NoticeController() {
-		noticeService = new NoticeService();
-	}
-	
-	
+
 	//noticeWrite POST
 	@RequestMapping(value = "noticeWrite", method = RequestMethod.POST)
 	public String noticeWrite(NoticeDTO noticeDTO, HttpServletRequest request) {
